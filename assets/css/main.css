@@ -208,8 +208,7 @@
 }
 
 .header__notify-item:hover,
-.header__notify-footer:hover,
-.header__language-item:hover {
+.header__notify-footer:hover {
     background-color: #f7f7f7;
 }
 
