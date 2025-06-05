@@ -98,6 +98,7 @@
     border-radius: 2px;
     display: none;
     animation: fadeIn 0.3s ease-in-out;
+    z-index: 2;
 }
 
 .header__qr::before {
@@ -151,6 +152,7 @@
                 visibility 0.2s ease-in-out;
     will-change: opacity, transform;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
 
 .header__notify{
@@ -159,6 +161,7 @@
 
 .header__language {
     width: 200px;
+    border-radius: 2px;
 }
 
 .header__notify::before,
@@ -441,22 +444,87 @@
     width: 150px;
     display: flex;
     justify-content: center;
+    position: relative;
+}
+
+.header__cart-list {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 44.5px;
+    background-color: white;
+    width: 400px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3.125rem rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0);
+    transform-origin: calc(100% - 23px) 0;
+    transition: opacity 0.2s ease-in-out,
+                transform 0.2s ease-in-out,
+                visibility 0.2s ease-in-out;
+    will-change: opacity, transform;
+}
+
+.header__cart-list:hover,
+.header__cart-icon:hover + .header__cart-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.header__cart-list:after {
+    content: "";
+    position: absolute;
+    right: 4px;
+    top: -28px;
+    border-width: 20px 26px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.header__cart-empty-img {
+    width: 40%;
+}
+
+.header__cart-list--empty {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header__cart-icon {
     color: var(--white-color);
     font-size: 2.4rem;
+    padding: 4px 8px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.header__cast-list-empty-msg {
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 14px;
+    color: var(--text-color);
 }
 
 .header__search-input {
-    flex: 1;
+    width: 100%;
     height: 100%;
     font-size: 1.4rem;
     border: none;
     outline: none;
     color: var(--text-color);
     padding: 0 16px;
-    border-radius: 3px;
+    border-radius: 2px;
+}
+
+.header__search-input-wrap {
+    flex: 1;
+    height: 100%;
+    position: relative;
 }
 
 .header__search-select {
@@ -485,7 +553,7 @@
     outline: none;
     height: 34px;
     width: 60px;
-    border-radius: 3px;
+    border-radius: 2px;
     margin-right: 3px;
 }
 
@@ -511,7 +579,7 @@
     width: 130px;
     box-shadow: 0 1px 2px #e0e0e0;
     padding-left: 0;
-    border-radius: 3px;
+    border-radius: 2px;
     display: none;
     animation: fadeIn 0.2s ease-in;
 }
@@ -526,18 +594,18 @@
 }
 
 .header__search-option:first-child {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 
 .header__search-option:last-child {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
 .header__search-option-item {
     background-color: var(--white-color);
-    border-radius: 3px;
+    border-radius: 2px;
     padding: 8px 8px;
 }
 
@@ -561,4 +629,52 @@
 
 .header__search-option-item--active i {
     display: inline-block;
+}
+
+.header__search-history {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    width: calc(100% - 16px);
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px #999;
+    display: none;
+    overflow: hidden;
+}
+
+.header__search-input:focus ~ .header__search-history{
+    display: block;
+}
+
+.header__search-history-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 6px 0 0;
+}
+
+.header__search-history-heading {
+    margin: 11px 12px;
+    font-size: 1.4rem;
+    color: #999;
+    font-weight: 400;
+}
+
+.header__search-history-item {
+    height: 38px;
+    padding: 0 12px;
+}
+
+.header__search-history-item:hover {
+    background-color: #fafafa;
+}
+
+.header__search-history-item a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 38px;
+    display: block;
+    margin: 0 -12px;
+    padding: 0 12px;
 }
