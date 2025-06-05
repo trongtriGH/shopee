@@ -301,6 +301,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 10px;
 }
 
 .auth-form__heading {
@@ -385,4 +387,27 @@
 .auth-form__socials--google {
     background-color: var(--white-color);
     color: #666;
+}
+
+.auth-form__help {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.auth-form__help-link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #939393;
+}
+
+.auth-form__help-seperate {
+    display: block;
+    border-left: 1px solid var(--border-color);
+    height: 22px;
+    margin: 0 16px;
+}
+
+.auth-form__help-forgot {
+    color: var(--primary-color);
 }
