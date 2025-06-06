@@ -640,6 +640,12 @@
     display: block;
 }
 
+.header__cart-list--empty .header__cart-heading,
+.header__cart-list--empty .header__cart-list-item,
+.header__cart-list--empty .header__cart-view-cart {
+    display: none;
+}
+
 .header__cart:has(> .header__cart-list--empty) > .header__cart-icon-wrapper > .header__cart-notice {
     display: none;
 }
