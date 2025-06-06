@@ -57,8 +57,12 @@
 .header__navbar-user-name {
     font-size: 1.4rem;
     color: var(--white-color);
-    margin-left: 8px;
+    margin-left: 4px;
     font-weight: 400;
+}
+
+.header__navbar-user-item--seperate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .header__navbar-user-menu {
@@ -133,7 +137,7 @@
 .header__navbar-item,
 .header__navbar-item-link{
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 300;
@@ -175,6 +179,10 @@
 .header__navbar-icon {
     font-size: 1.8rem;
     margin: 0 5px;
+}
+
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 3px;
 }
 
 .header__navbar-item-title--no-pointer {
@@ -247,6 +255,7 @@
     will-change: opacity, transform;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
     z-index: 2;
+    border-radius: 2px;
 }
 
 .header__notify{
@@ -521,6 +530,11 @@
     width: 200px;
 }
 
+.header__logo-link {
+    text-decoration: none;
+    color: transparent;
+}
+
 .header__logo-img {
     width: 150px;
 }
@@ -545,7 +559,7 @@
 .header__cart-list {
     min-height: 20px;
     position: absolute;
-    top: calc(100% + 6px);
+    top: calc(100% + 1px);
     right: 43px;
     background-color: var(--white-color);
     width: 400px;
