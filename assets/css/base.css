@@ -4,7 +4,7 @@
     --black-color: #000;
     --text-color: #333;
     --border-color: #dddddd;
-
+    --star-gold-color: #ffce3e;
     --header-height: 120px;
     --navbar-height: 34px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
@@ -36,7 +36,7 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -12px;
+    margin: 0 -5px;
 }
 
 /* .grid_column {
@@ -46,13 +46,18 @@ html {
 
 
 .grid__column-2 {
-    padding: 0 12px;
+    padding: 0 5px;
     width: 16.6667%;
-}
+} 
 
 .grid__column-10 {
-    padding: 0 12px;
+    padding: 0 5px;
     width: 83.3333%;
+}
+
+.grid__column-2-4 {
+    padding: 0 5px;
+    width: 20%;
 }
 
 @keyframes fadeIn {
