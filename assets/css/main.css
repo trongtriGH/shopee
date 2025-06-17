@@ -559,7 +559,7 @@
 .header__cart-list {
     min-height: 20px;
     position: absolute;
-    top: calc(100% + 1px);
+    top: calc(100% + 2px);
     right: 43px;
     background-color: var(--white-color);
     width: 400px;
@@ -890,6 +890,7 @@
     box-shadow: 0 1px 3px #999;
     display: none;
     overflow: hidden;
+    z-index: 3;
 }
 
 .header__search-input:focus ~ .header__search-history{
