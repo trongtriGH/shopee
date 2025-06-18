@@ -157,6 +157,7 @@ html {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    
 }
 
 .select-input:hover .select-input__list {
