@@ -751,6 +751,7 @@
     z-index: 2;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .header__cart-list-empty-msg {
