@@ -577,6 +577,15 @@
     margin: 0 8px;
 }
 
+.header__mobile-search {
+    padding: 0 8px;
+}
+
+.header__mobile-search-icon {
+    font-size: 2.6rem;
+    color: var(--white-color);
+}
+
 .header__logo {
     width: 200px;
 }
@@ -584,10 +593,16 @@
 .header__logo-link {
     text-decoration: none;
     color: transparent;
+    display: block;
+    line-height: 0;
 }
 
 .header__logo-img {
     width: 150px;
+}
+
+.header__search-checkbox:checked~.header__search {
+    display: flex;
 }
 
 .header__search {
