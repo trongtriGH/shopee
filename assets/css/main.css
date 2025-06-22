@@ -737,7 +737,6 @@
 .header__cart-notice {
     position: absolute;
     width: 22px;
-    text-align: center;
     padding: 2px 4px;
     line-height: 10px;
     color: var(--primary-color);
@@ -750,6 +749,8 @@
     border: 2px solid var(--primary-color);
     pointer-events: none;
     z-index: 2;
+    display: flex;
+    justify-content: center;
 }
 
 .header__cart-list-empty-msg {
