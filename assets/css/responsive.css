@@ -36,6 +36,14 @@
     .header__sort-bar {
         display: flex;
     }
+
+    .app__content {
+        padding-top: 8px;
+    }
+
+    .mobile-category {
+        display: block;
+    }
 }
 
 /* Tablet */
@@ -96,5 +104,23 @@
             top: var(--header-height);
             opacity: 1;
         }
+    }
+
+    .pagination-item {
+        margin: 0;   
+    }
+
+    .pagination-item__link {
+        --height: 28px;
+        font-size: 1.6rem;
+        min-width: 36px;
+    }
+
+    .app__content {
+        margin: 0 4px;
+    }
+
+    .header__mobile-search {
+        display: block;
     }
 }
